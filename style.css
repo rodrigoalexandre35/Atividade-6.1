@@ -1,10 +1,9 @@
-
 :root {
     --cor-fundo: rgb(243, 175, 119);
     --cor-header: #f0ebe4;
     --cor-primaria: #0d0d0e;
     --cor-texto: #333;
-    --cor-hover: #0d0d0e;
+    --cor-hover: #f0a865;
     --fonte-principal: 'Segoe UI', sans-serif;
 }
 
@@ -72,7 +71,7 @@ nav a:hover {
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid rgb(22, 22, 22);
+    border: 2px solid rgb(211, 23, 23);
 }
 
 main {
@@ -96,7 +95,7 @@ article {
     background-color: white;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(235, 9, 9, 0.966);
     text-align: center;
 }
 
@@ -108,4 +107,5 @@ article img {
 article h3 {
     color: var(--cor-primaria);
 }
+
 
