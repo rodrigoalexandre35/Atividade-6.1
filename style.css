@@ -3,7 +3,9 @@
     --cor-header: #f0ebe4;
     --cor-primaria: #0d0d0e;
     --cor-texto: #333;
-    --cor-hover: #f0a865;
+    --cor-hover: #0d0d0e;
+    --cor-link: rgb(236, 166, 73);
+    --cor-botao: rgb(235, 81, 81);
     --fonte-principal: 'Segoe UI', sans-serif;
 }
 
@@ -25,6 +27,9 @@ header {
     left: 0;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .header-content {
@@ -34,7 +39,7 @@ header {
 }
 
 header h1 {
-    color: #111111;
+    color: var(--cor-primaria);
     margin-bottom: 30px;
     text-align: center;
 }
@@ -47,7 +52,7 @@ nav {
 }
 
 nav a {
-    color: rgb(12, 12, 12);
+    color: var(--cor-link);
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
@@ -56,22 +61,7 @@ nav a {
 
 nav a:hover {
     background-color: var(--cor-hover);
-}
-
-.profile-info {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: rgb(15, 15, 15);
-}
-
-.profile-pic {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgb(211, 23, 23);
+    color: white;
 }
 
 main {
@@ -85,7 +75,31 @@ h2 {
     text-align: center;
 }
 
-section {
+.detalhes-filme {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.detalhes-filme img {
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.detalhes-filme .info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.detalhes-filme .info p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+section.listagem {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
@@ -95,7 +109,7 @@ article {
     background-color: white;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(235, 9, 9, 0.966);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
 }
 
@@ -106,6 +120,101 @@ article img {
 
 article h3 {
     color: var(--cor-primaria);
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form button {
+    background-color: var(--cor-header);
+    color: var(--cor-primaria);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--cor-hover);
+    color: white;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 40px auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--cor-header);
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table button {
+    background-color: var(--cor-hover);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+table button:hover {
+    background-color: var(--cor-primaria);
+}
+
+p {
+    text-align: justify;
+    line-height: 1.6;
 }
 
 
